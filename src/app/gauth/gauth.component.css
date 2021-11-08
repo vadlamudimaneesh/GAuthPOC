@@ -1,0 +1,91 @@
+.example-card{
+    width: 380px;
+    height: auto;
+    box-shadow: 5px 10px #888888;
+    font-family: 'Segoe UI',sans-serif;
+}
+
+.container{
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    align-self: center !important;
+    padding-top: 20px;
+    padding-bottom: 20px;   
+}
+
+.headings{
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.line{
+    font-weight: 400 !important;
+}
+
+.sub-heading{
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 20px !important;
+}
+
+.image{
+    width: 40%;
+    margin-top: 0px !important;
+    margin-bottom: 20px;
+    width: 250px;
+    height: 250px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.QRcontainer{
+    position: relative;
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    align-self: center !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 330px;
+    height: 230px;
+}
+
+.key{
+    font-size: 16px !important;
+    font-weight: 600;
+    display: flex !important;
+    align-content: center !important;
+    justify-content: center !important;
+    margin: 0px!important;
+}
+
+button{
+    border: 1px solid;
+    border-radius: 5px;
+    /* width: 100px;
+    height: 40px; */
+    padding: 7px 20px;
+    background-color: #463594;
+    color: #fff;
+}
+
+
+::ng-deep .mat-form-field-wrapper {
+    position: relative;
+    width: 300px;
+    display: flex !important;
+    align-items: center !important;
+    margin: 5px !important;
+}
+
+.btns{
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    vertical-align: middle  !important;
+    margin: 0px 5px 0px 5px;
+}

@@ -1,3 +1,45 @@
-<p>
-  gauth works!
-</p>
+<div class="container">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title class="headings">Setup TFA</mat-card-title>
+    </mat-card-header>
+    <div class="line"><mat-divider></mat-divider></div>
+    <mat-card-content>
+      <p class= "sub-heading">
+        Scan the QR-code or enter the secret key in Google Authenticator  
+      </p>
+    </mat-card-content>
+    <div class="QRcontainer center">
+      <div *ngIf= 'this.qrcode'>
+        <!-- <div [ngClass]="{check:getQRcode()}"> -->
+          <img mat-card-image src="{{this.qrcode}}" alt="QR-code-url" class="image">
+        <!-- </div> -->
+      </div> 
+    </div>
+    <div class="line"><mat-divider></mat-divider></div>
+    <p class ="key">Secret Value</p>
+    <p class ="key">{{secretValue?.data.secret}}</p>
+ 
+    <mat-form-field [formGroup]='verifycodeform' appearance="fill">
+      <mat-label>Enter OTP</mat-label>
+      <input matInput formControlName="entercode" >
+    </mat-form-field>
+    <div class = "btns">
+      <button (click)="submitcode()">Enable TFA</button>
+      <button mat-button (click)="getQRcode()">submit</button>
+    </div>
+  </mat-card>
+</div>
+<!-- <h3>Secret Value</h3>{{secretValue?.data.secret}}
+{{getcodevalue?.data.code}} -->
+<!-- <div *ngIf= 'this.qrcode'>
+  <img src={{this.qrcode}}>
+</div>
+<form [formGroup]='verifycodeform'>
+  <input type= "text" formControlName="entercode">
+  <button (click)="submitcode()">submit</button>
+</form> -->
+<!-- <mat-card-actions>
+  <button mat-button>LIKE</button>
+  <button mat-button>SHARE</button>
+</mat-card-actions> -->
